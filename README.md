@@ -35,11 +35,12 @@ I hope this data is helpful for your research!
 
 ### Files used
 - **bikeshare.py** -
-- **chicago.zip** - dataset used for analysis
-- **new_york_city.zip** - dataset used for analysis
-- **washington.zip** - dataset used for analysis
+- **chicago.zip** - dataset used for project
+- **new_york_city.zip** - dataset used for project
+- **washington.zip** - dataset used for project
 
 ### Credits
-Udacity.com
-Github.com
-Python.org
+- **https://www.udacity.com/**
+- **https://github.com/**
+- **https://www.python.org/**
+- **https://brew.sh/**
