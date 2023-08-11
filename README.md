@@ -1,17 +1,45 @@
 >**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
 
 ### Date created
-Include the date you created this project and README file.
+August 10th , 2023
 
 ### Project Title
-Replace the Project Title
+Programming for Data Science with Python
 
 ### Description
-Describe what your project is about and what it does
+##Bike Share Data
+
+This repository contains data for three major US cities' bike share systems: Chicago, New York City, and Washington, DC. The data was collected by Motivate, a bike share system provider.
+
+The data includes the following information for each trip:
+
+ * Start Time
+ * End Time
+ * Trip Duration (in seconds)
+ * Start Station
+ * End Station
+ * User Type (Subscriber or Customer)
+ * Gender (for Chicago and New York City only)
+ * Birth Year (for Chicago and New York City only)
+
+ The data can be used to explore bike share usage patterns. For example, you could use the data to answer questions like:
+
+ * What are the most popular times of day for bike share trips?
+ * What are the most popular stations for starting and ending bike share trips?
+ * How long are the average bike share trips?
+ * Who are the most common users of bike share systems?
+
+I hope this data is helpful for your research!
+
+
 
 ### Files used
-Include the files used
+- **bikeshare.py** -
+- **chicago.zip** - dataset used for analysis
+- **new_york_city.zip** - dataset used for analysis
+- **washington.zip** - dataset used for analysis
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Udacity.com
+Github.com
+Python.org
