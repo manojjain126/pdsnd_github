@@ -29,31 +29,32 @@ def get_filters():
             print("Invalid City !! . Enter a valid input from given cities.")
 
     # TO DO: get user input for month (all, january, february, ... , june)
+    months = ["january", "february", "march", "april", "may", "june", "all"]
     while True:
         month = input(
             "Enter the month (January, Februaray , March , April , May , June) or 'All' for all months : "
         ).lower()
-        months = ["january", "february", "march", "april", "may", "june", "all"]
         if month in months:
             break
         else:
-            print("Invalid Month !! . Enter a valid input from given months.")
+            print("Invalid Month !! Enter a valid input from given months.")
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    days = [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday",
+        "all",
+    ]
     while True:
         day = input(
             "Enter the day (Monday, Tuesday , Wednesday , Thursday , Friday , Saturday) or 'All' for all days : "
         ).lower()
-        days = [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday",
-            "saturday",
-            "sunday",
-            "all",
-        ]
+
         if day in days:
             break
         else:
@@ -156,7 +157,7 @@ def trip_duration_stats(df):
 
     # TO DO: display mean travel time
     mean_travel_time = df["Trip Duration"].mean()
-    print("MEan Travel Time (Seconds) : ", mean_travel_time)
+    print("Mean Travel Time (Seconds) : ", mean_travel_time)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print("-" * 40)
