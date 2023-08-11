@@ -12,7 +12,7 @@ CITY_DATA = {
 
 def get_filters():
     """
-    Asks user to specify a city, month, and day to analyze.
+    Asks user to specify a city, month, and day to analyze the data.
 
     Returns:
         (str) city - name of the city to analyze
@@ -57,7 +57,7 @@ def get_filters():
         if day in days:
             break
         else:
-            print("Invalid Day !! . Enter a valid input from given days.")
+            print("Invalid Day !! Enter a valid input from given days.")
 
     print("-" * 40)
     return city, month, day
@@ -79,7 +79,7 @@ def load_data(city, month, day):
     df["Start Time"] = pd.to_datetime(df["Start Time"])
     df['Month'] = df["Start Time"].dt.month_name()
     df['weekday'] = df["Start Time"].dt.day_name()
-    
+
     # Month Filter
     if month != "all":
         df = df[df['Month'] == month]
@@ -87,7 +87,7 @@ def load_data(city, month, day):
     # Day Filter
     if day != "all":
         df = df[df['weekday'] == day]
-        
+
     return df
 
 
@@ -202,7 +202,7 @@ def raw_data(df):
     """Displays Raw data until user inputs."""
 
     start_time = time.time()
-    
+
     # TO DO: display Raw Data
     raw_data_input = input("\nWould you like to see 5 lines of raw data ? Enter yes or no.\n").lower()
     row = 0
@@ -235,8 +235,8 @@ def main():
         user_stats(df)
 #        test_load_data()
         raw_data(df)
-        
-        restart = input("\nWould you like to restart? Enter yes or no.\n")
+
+        restart = input("\nWould you like to restart? Enter yes or no : \n")
         if restart.lower() != "yes":
             break
 
