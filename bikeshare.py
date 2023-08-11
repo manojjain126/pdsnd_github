@@ -33,31 +33,32 @@ def get_filters():
             print("Invalid City !! . Enter a valid input from given cities.")
 
     # TO DO: get user input for month (all, january, february, ... , june)
+    months = ["january", "february", "march", "april", "may", "june", "all"]
     while True:
         month = input(
             "Enter the month (January, Februaray , March , April , May , June) or 'All' for all months : "
         ).lower()
-        months = ["january", "february", "march", "april", "may", "june", "all"]
         if month in months:
             break
         else:
-            print("Invalid Month !! . Enter a valid input from given months.")
+            print("Invalid Month !! Enter a valid input from given months.")
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    days = [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday",
+        "all",
+    ]
     while True:
         day = input(
             "Enter the day (Monday, Tuesday , Wednesday , Thursday , Friday , Saturday) or 'All' for all days : "
         ).lower()
-        days = [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday",
-            "saturday",
-            "sunday",
-            "all",
-        ]
+
         if day in days:
             break
         else:
@@ -88,10 +89,14 @@ def load_data(city, month, day):
     df['Month'] = df["Start Time"].dt.month_name()
     df['weekday'] = df["Start Time"].dt.day_name()
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 
 >>>>>>> documentation
+=======
+
+>>>>>>> refactoring
     # Month Filter
     if month != "all":
         df = df[df['Month'] == month]
@@ -100,10 +105,14 @@ def load_data(city, month, day):
     if day != "all":
         df = df[df['weekday'] == day]
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 
 >>>>>>> documentation
+=======
+
+>>>>>>> refactoring
     return df
 
 
@@ -172,7 +181,7 @@ def trip_duration_stats(df):
 
     # TO DO: display mean travel time
     mean_travel_time = df["Trip Duration"].mean()
-    print("MEan Travel Time (Seconds) : ", mean_travel_time)
+    print("Mean Travel Time (Seconds) : ", mean_travel_time)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print("-" * 40)
@@ -219,10 +228,14 @@ def raw_data(df):
 
     start_time = time.time()
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 
 >>>>>>> documentation
+=======
+
+>>>>>>> refactoring
     # TO DO: display Raw Data
     raw_data_input = input("\nWould you like to see 5 lines of raw data ? Enter yes or no.\n").lower()
     row = 0
@@ -253,10 +266,17 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-#        test_load_data()
         raw_data(df)
 <<<<<<< HEAD
+<<<<<<< HEAD
         
+=======
+
+        #Test the data shape eqaulity
+        #        test_load_data()
+
+
+>>>>>>> refactoring
         restart = input("\nWould you like to restart? Enter yes or no.\n")
 =======
 
