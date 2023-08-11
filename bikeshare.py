@@ -79,7 +79,7 @@ def load_data(city, month, day):
     df["Start Time"] = pd.to_datetime(df["Start Time"])
     df['Month'] = df["Start Time"].dt.month_name()
     df['weekday'] = df["Start Time"].dt.day_name()
-    
+
     # Month Filter
     if month != "all":
         df = df[df['Month'] == month]
@@ -87,7 +87,7 @@ def load_data(city, month, day):
     # Day Filter
     if day != "all":
         df = df[df['weekday'] == day]
-        
+
     return df
 
 
@@ -202,7 +202,7 @@ def raw_data(df):
     """Displays Raw data until user inputs."""
 
     start_time = time.time()
-    
+
     # TO DO: display Raw Data
     raw_data_input = input("\nWould you like to see 5 lines of raw data ? Enter yes or no.\n").lower()
     row = 0
@@ -233,9 +233,12 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-#        test_load_data()
         raw_data(df)
-        
+
+        #Test the data shape eqaulity
+        #        test_load_data()
+
+
         restart = input("\nWould you like to restart? Enter yes or no.\n")
         if restart.lower() != "yes":
             break
